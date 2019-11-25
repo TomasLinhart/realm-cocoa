@@ -29,6 +29,7 @@ LD_RUNPATH_SEARCH_PATHS[sdk=watch*] = $(inherited) @executable_path/Frameworks @
 LD_RUNPATH_SEARCH_PATHS[sdk=appletv*] = $(inherited) @executable_path/Frameworks @loader_path/Frameworks;
 
 REALM_PLATFORM_SUFFIX = $(PLATFORM_NAME);
+REALM_PLATFORM_SUFFIX[sdk=macosx*] = maccatalyst;
 OTHER_LDFLAGS[sdk=macosx*] = -lrealm-$(REALM_PLATFORM_SUFFIX)$(REALM_LIBRARY_SUFFIX) $(REALM_CATALYST_FLAGS);
 OTHER_LIBTOOLFLAGS[sdk=macosx*] = -lrealm-$(REALM_PLATFORM_SUFFIX)$(REALM_LIBRARY_SUFFIX) $(REALM_CATALYST_FLAGS);
 OTHER_LDFLAGS[sdk=iphone*] = -lrealm-ios$(REALM_LIBRARY_SUFFIX);
